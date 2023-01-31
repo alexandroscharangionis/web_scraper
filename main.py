@@ -9,6 +9,5 @@ website_html = response.text
 soup = BeautifulSoup(website_html, "html.parser")
 # Get all movie title tags based on tag name and class:
 movies = soup.find_all(name="h3", class_="title")
-# Create list containing only the movie titles text:
-movie_titles = [movie.getText() for movie in movies]
-movie_titles.reverse()
+# Create list containing only the movie titles text (in reverse order):
+movie_titles = [movie.getText() for movie in movies][::-1]
