@@ -1,1 +1,1 @@
-# web_scraper
+# Simple web scraper script for top 100 movies of all time, using Beautiful Soup
