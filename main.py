@@ -11,3 +11,7 @@ soup = BeautifulSoup(website_html, "html.parser")
 movies = soup.find_all(name="h3", class_="title")
 # Create list containing only the movie titles text (in reverse order):
 movie_titles = [movie.getText() for movie in movies][::-1]
+
+with open("movies.txt", "w") as file:
+    for title in movie_titles:
+        file.write(f"{title}\n")
